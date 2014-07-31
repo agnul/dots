@@ -1,0 +1,50 @@
+# Alias definitions to be used by both bash and zsh
+
+# enable color support of ls and also add handy aliases
+if [ "$TERM" != "dumb" ]; then
+    eval "`dircolors -b`"
+    alias ls='ls --color=auto'
+    alias dir='ls --color=auto --format=vertical'
+    alias vdir='ls --color=auto --format=long'
+fi
+
+# some more ls aliases
+alias ll='ls -l'
+alias la='ls -A'
+alias lh='ls -rSlh'
+alias l='ls -CF'
+alias del='rm -i'
+alias ack=ack-grep
+alias eclipse="GTK2_RC_FILES=~/.themes/eclipse.gtkrc eclipse"
+alias luna="GTK2_RC_FILES=/home/agnul/.themes/eclipse.gtkrc /opt/agnul/eclipse-jee-luna/eclipse -vm /opt/agnul/java/bin/java -Xms512m -Xmx1024m -Xss64m -XX:PermSize=512m -XX:MaxPermSize=1024m"
+alias chili-test="ssh -i ~/.ssh/chili_rsa ubuntu@chili-test"
+alias start-chili="nohup VBoxHeadless -s Chili < /dev/null > /dev/null 2>&1 &"
+alias stop-chili="ssh root@chili-local shutdown -h now"
+
+function count_types {
+    find ${1:-.} -type f | awk 'FS="." { print $NF; }' | sort -f \
+            | uniq -c | sort -rn | head
+}
+
+function kill_flurry {
+    ID=`ps -u $USER | grep flurry | awk '{print $1};'`
+    if [[ -n $ID ]]; then kill $ID; fi;
+}
+
+function svnlog {
+
+    svn log ${*:2} | sed -n "/${1:-angelo.dipierro@omniacom.it}/,/-----$/ p" 
+
+}
+
+# some variables
+export LESS="-SR"
+export PAGER=most
+# export ACK_OPTIONS="--text"
+export TODOTXT_DEFAULT_ACTION=ls
+alias t='todo.sh -d ~/.todo.cfg'
+
+alias kepler='GTK2_RC_FILES=~/.themes/eclipse.gtkrc /opt/agnul/eclipse-jee-kepler/eclipse'
+alias adk='GTK2_RC_FILES=~/.themes/eclipse.gtkrc /opt/agnul/eclipse-3.8/eclipse'
+alias adt='GTK2_RC_FILES=~/.themes/eclipse.gtkrc /opt/agnul/adt-bundle-linux-x86_64-20130219/eclipse/eclipse'
+alias svndiff='svn diff -x -uw'
