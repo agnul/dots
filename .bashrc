@@ -100,7 +100,7 @@ fi
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
-    . ~/bin/todo_completion
+    [ -f ~/bin/todo_completion ] && . ~/bin/todo_completion
 fi
 
 if [ -f ~/.aliasrc ]; then
