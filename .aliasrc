@@ -38,7 +38,7 @@ function svnlog {
 }
 
 # some variables
-export LESS="-SR"
+export LESS="-iSR"
 export PAGER=most
 # export ACK_OPTIONS="--text"
 export TODOTXT_DEFAULT_ACTION=ls
