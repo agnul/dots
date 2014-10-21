@@ -116,10 +116,10 @@ export SCALA_HOME=/opt/agnul/scala
 
 export ANT_HOME=/opt/agnul/ant
 export M2_HOME=/opt/agnul/maven
-export CATALINA_HOME=/opt/agnul/tomcat
+#export CATALINA_HOME=/opt/agnul/tomcat
 export MW_HOME=/opt/agnul/weblogic
 
-export PATH=${HOME}/bin:${GOPATH}/bin:/opt/agnul/google_appengine:${ANT_HOME}/bin:${JAVA_HOME}/bin/:${GOROOT}/bin:/opt/agnul/eclipse/:${M2_HOME}/bin:${SCALA_HOME}/bin:${PATH}:${CATALINA_HOME}/bin:/opt/agnul/domains/SkyAnywhere/bin
+export PATH=${HOME}/bin:${GOPATH}/bin:/opt/agnul/google_appengine:${ANT_HOME}/bin:${JAVA_HOME}/bin:${GOROOT}/bin:/opt/agnul/eclipse/:${M2_HOME}/bin:${SCALA_HOME}/bin:${PATH}:${CATALINA_HOME}/bin:/opt/agnul/domains/SkyAnywhere/bin
 
 alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s<1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'
 
