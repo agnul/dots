@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/agnul/dev/ChiliTv-trunk/NewChili/functionalTests/src/main'
-let g:netrw_dirhist_2='/home/agnul/dev/ChiliTv-trunk/NewChili/licenseServer/src/main/webapp/WEB-INF'
-let g:netrw_dirhist_3='/home/agnul/dev/ChiliTv-release/NewChili/licenseServer/src/main/webapp/META-INF/maven'
-let g:netrw_dirhist_4='/home/agnul/dev/ChiliTv-release/NewChili/deviceGateway/src/main/webapp/META-INF/maven'
-let g:netrw_dirhist_5='/home/agnul/dev/ChiliTv-release/NewChili/distribution/common/conf'
-let g:netrw_dirhist_6='/home/agnul/dev/ChiliTv-release/NewChili/distribution/common'
