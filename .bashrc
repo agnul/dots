@@ -134,4 +134,6 @@ export GIT_PS1_SHOWCOLORHINTS=1
 
 export PS1=${PS1}'$(__git_ps1 "[%s] ")'
 
+source ~/.git_completion.sh
+__git_complete g __git_main
 

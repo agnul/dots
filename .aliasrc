@@ -38,7 +38,7 @@ function svnlog {
 }
 
 # some variables
-export LESS="-iSR"
+export LESS="-iFRSX"
 export PAGER=most
 # export ACK_OPTIONS="--text"
 export TODOTXT_DEFAULT_ACTION=ls
@@ -48,3 +48,5 @@ alias kepler='GTK2_RC_FILES=~/.themes/eclipse.gtkrc /opt/agnul/eclipse-jee-keple
 alias adk='GTK2_RC_FILES=~/.themes/eclipse.gtkrc /opt/agnul/eclipse-3.8/eclipse'
 alias adt='GTK2_RC_FILES=~/.themes/eclipse.gtkrc /opt/agnul/adt-bundle-linux-x86_64-20130219/eclipse/eclipse'
 alias svndiff='svn diff -x -uw'
+alias g=git
+
