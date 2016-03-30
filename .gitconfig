@@ -12,6 +12,9 @@
 	co = checkout
 	cl = clone
 	br = branch
+	dfw = diff --ignore-all-space
+	shw = show --ignore-all-space
+	plog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an <%ae>%Creset' --abbrev-commit --date=relative
 [pusdh]
 [push]
 	default = simple
