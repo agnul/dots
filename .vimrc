@@ -44,3 +44,5 @@ map <F11> :set wrap!<CR>
 map <F12> :set number!<CR>
 
 cmap w!! %!sudo tee >/dev/null %
+vmap ,x :!tidy -q -i --show-errors 0<CR>
+
