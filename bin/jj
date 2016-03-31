@@ -1,0 +1,32 @@
+#!/bin/bash
+
+while getopts ":j:" opt; do
+    case $opt in
+	j)
+	    JARFILE=$OPTARG
+	    shift $((OPTIND-1))
+	    ;;
+	:)
+	    echo "Option -$OPTARG requires an argument." >&2
+	    exit 1
+	    ;;
+    esac
+done
+
+
+CP=.
+
+if [ -n ${JARFILE} ]
+then
+    CP=${CP}:${JARFILE}
+fi
+
+if [ -d lib ] 
+then
+    for J in lib/*.jar
+    do
+	CP=${CP}:${J}
+    done
+fi
+
+java -cp ${CP} $@ 
