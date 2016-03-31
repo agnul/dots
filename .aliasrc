@@ -49,4 +49,5 @@ alias adk='GTK2_RC_FILES=~/.themes/eclipse.gtkrc /opt/agnul/eclipse-3.8/eclipse'
 alias adt='GTK2_RC_FILES=~/.themes/eclipse.gtkrc /opt/agnul/adt-bundle-linux-x86_64-20130219/eclipse/eclipse'
 alias svndiff='svn diff -x -uw'
 alias g=git
+alias please='sudo $(fc -ln -1)'
 
