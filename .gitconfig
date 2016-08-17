@@ -1,9 +1,10 @@
 [user]
-	name = agnul
-	email = agnul@hideinyourshell.net
+	name = Angelo Dipierro
+	email = angelo.dipierro@ext.contactlab.com
 [core]
 	editor = vim
 	pager = less
+	excludesfile = ~/.gitignore
 [alias]
 	ci = commit
 	st = status -s
@@ -23,3 +24,5 @@
 	conflictstyle = diff3
 [mergetool]
 	prompt = false
+[pull]
+	rebase = true
