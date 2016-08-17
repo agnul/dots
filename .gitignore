@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/java,maven,eclipse,intellij
+# Created by https://www.gitignore.io/api/java,maven,eclipse,intellij,sonar
 
 ### Java ###
 *.class
@@ -131,4 +131,7 @@ fabric.properties
 ### Intellij Patch ###
 *.iml
 
+### Sonar ###
+#Sonar generated dir
+.sonar
 
