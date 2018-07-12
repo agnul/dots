@@ -37,6 +37,26 @@ function svnlog {
 
 }
 
+function m() {
+    if [[ -x ./mvnw ]] ; then
+        CMD=./mvnw
+    else
+        CMD=mvn
+    fi
+
+    $CMD $@
+}
+
+function gdl() {
+    if [[ -x ./gradlew ]] ; then
+        CMD=./gradlew
+    else
+        CMD=gradle
+    fi
+
+    $CMD $@
+}
+
 # some variables
 export LESS="-iFRSX"
 export PAGER=most
