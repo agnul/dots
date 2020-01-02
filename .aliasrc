@@ -64,10 +64,7 @@ export PAGER=most
 export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh -d ~/.todo.cfg'
 
-alias kepler='GTK2_RC_FILES=~/.themes/eclipse.gtkrc /opt/agnul/eclipse-jee-kepler/eclipse'
-alias adk='GTK2_RC_FILES=~/.themes/eclipse.gtkrc /opt/agnul/eclipse-3.8/eclipse'
-alias adt='GTK2_RC_FILES=~/.themes/eclipse.gtkrc /opt/agnul/adt-bundle-linux-x86_64-20130219/eclipse/eclipse'
-alias svndiff='svn diff -x -uw'
+alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s<1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'
 alias g=git
 alias please='sudo $(fc -ln -1)'
 
