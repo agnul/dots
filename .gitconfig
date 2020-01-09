@@ -1,10 +1,11 @@
 [user]
 	name = Angelo Dipierro
-	email = angelo.dipierro@ext.contactlab.com
+	email = angelo.dipierro@contactlab.com
 [core]
 	editor = vim
 	pager = less
 	excludesfile = ~/.gitignore
+	autocrlf = false
 [alias]
 	ci = commit
 	st = status -s
@@ -25,4 +26,8 @@
 [mergetool]
 	prompt = false
 [pull]
-	rebase = true
+	rebase = preserve
+[diff]
+	submodule = log
+[status]
+	submodulesummary = true
