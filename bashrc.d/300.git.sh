@@ -8,6 +8,8 @@ if [ -f /usr/bin/git ]; then
 
   export PS1=${PS1}'$(__git_ps1 "[%s] ")'
 
-  source ~/.git_completion.sh
-  __git_complete g __git_main
+  if [ -f /usr/share/bash-completion/completions/git ]; then
+    source /usr/share/bash-completion/completions/git
+    __git_complete g __git_main
+  fi
 fi
