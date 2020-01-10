@@ -15,11 +15,7 @@ alias lh='ls -rSlh'
 alias l='ls -CF'
 alias del='rm -i'
 alias ack=ack-grep
-alias eclipse="GTK2_RC_FILES=~/.themes/eclipse.gtkrc eclipse"
-alias luna="GTK2_RC_FILES=/home/agnul/.themes/eclipse.gtkrc /opt/agnul/eclipse-jee-luna/eclipse -vm /opt/agnul/java/bin/java -Xms512m -Xmx1024m -Xss64m -XX:PermSize=512m -XX:MaxPermSize=1024m"
-alias chili-test="ssh -i ~/.ssh/chili_rsa ubuntu@chili-test"
-alias start-chili="nohup VBoxHeadless -s Chili < /dev/null > /dev/null 2>&1 &"
-alias stop-chili="ssh root@chili-local shutdown -h now"
+alias hssh="history | cut -d\  -f4- | grep -P '^ssh'"
 
 function count_types {
     find ${1:-.} -type f | awk 'FS="." { print $NF; }' | sort -f \
@@ -59,7 +55,7 @@ function gdl() {
 
 # some variables
 export LESS="-iFRSX"
-export PAGER=most
+export PAGER=less
 # export ACK_OPTIONS="--text"
 export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh -d ~/.todo.cfg'
@@ -67,4 +63,5 @@ alias t='todo.sh -d ~/.todo.cfg'
 alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s<1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'
 alias g=git
 alias please='sudo $(fc -ln -1)'
+alias soapui='~/opt/SoapUI-5.5.0/bin/soapui.sh >/dev/null 2>&1 &'
 

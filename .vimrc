@@ -44,5 +44,15 @@ map <F11> :set wrap!<CR>
 map <F12> :set number!<CR>
 
 cmap w!! %!sudo tee >/dev/null %
-vmap ,x :!tidy -q -i --show-errors 0<CR>
 
+" run html-tidy on selection
+vmap ,h :!tidy -q -i --show-errors 0<CR>
+
+" run xmllint on selection
+vmap ,x :!tidy -q -i -xml --show-errors 0 --indent-spaces 4 --wrap 0<CR>
+
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
+set ls=2
