@@ -17,6 +17,10 @@ alias del='rm -i'
 alias ack=ack-grep
 alias hssh="history | cut -d\  -f4- | grep -P '^ssh'"
 
+alias xl='exa -l'
+alias xlt='exa -lsnew'
+alias fd='fdfind'
+
 function count_types {
     find ${1:-.} -type f | awk 'FS="." { print $NF; }' | sort -f \
             | uniq -c | sort -rn | head
